@@ -3,6 +3,7 @@ int rightButton = 3;
 
 int leftLed = 12;
 int rightLed = 13;
+int count  = 0;
 
 int num_array[10][7] = {{ 1,1,1,1,1,1,0 },   // 0
                         { 0,1,1,0,0,0,0 },    // 1
@@ -22,7 +23,6 @@ void Num_Write(int number)
 {
   for (int pin=4; pin<11; pin++) {
    digitalWrite(pin, !num_array[number][pin-4]);  // anode
-   pin++;
   }
 }
 
@@ -128,11 +128,11 @@ void loop() {
   if(left == 0) {
     digitalWrite(leftLed, HIGH);
     digitalWrite(rightLed, HIGH);
-    zero();
-  } else {
-    digitalWrite(leftLed, LOW);
-    digitalWrite(rightLed, LOW);
-    turnOff();
-  }
-  
+    Num_Write(count++);
+    if(count>9) {
+      count = 0;
+    }
+  } 
+
+  delay(50);
 }
