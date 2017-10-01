@@ -14,8 +14,6 @@ void setup() {
 
 void loop() {
   buttonState = digitalRead(buttonPin);
-
-  buttonPin = 3;
   
   if (buttonState != lastButtonState) {
     if (buttonState == HIGH) {
@@ -26,7 +24,6 @@ void loop() {
     } else {
       Serial.println("off");
     }
-
     delay(50);
   }
   lastButtonState = buttonState;
