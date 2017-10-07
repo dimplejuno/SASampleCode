@@ -12,7 +12,7 @@ void setup() {
   Serial.println(eng);
   Serial.print("math = ");
   Serial.println(math);
-  Serial.print("avg = ");
+  Serial.print("math = ");
   Serial.println(sum/3);
 
 }
