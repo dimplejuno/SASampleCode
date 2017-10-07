@@ -62,8 +62,9 @@ void loop() {
     // if the state has changed, increment the counter
     if (buttonState == HIGH) {
 
-      int noteDuration = 1000 / noteDurations[buttonPushCounter];
-      tone(8, melody[buttonPushCounter], noteDuration);
+      int noteDuration = 400 / noteDurations[buttonPushCounter];
+      //tone(8, melody[buttonPushCounter], noteDuration);
+      tone(8, melody[random(8)], noteDuration);
       int pauseBetweenNotes = noteDuration * 1.30;
       delay(pauseBetweenNotes);
       // stop the tone playing:
