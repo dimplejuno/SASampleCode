@@ -18,12 +18,6 @@ void turnOnNumber(int num) {
   }
 }
 
-void turnOffAll() {
-  for(int i=2; i<10; i++) {
-    digitalWrite(i, HIGH);
-  }
-}
-
 void setup() {
   for(int i=2; i<10; i++) {
     pinMode(i, OUTPUT);
@@ -31,5 +25,8 @@ void setup() {
 }
 
 void loop() {
-
+  for(int i=9; i>=0; i--) {
+    turnOnNumber(i);
+    delay(1000);
+  }
 }
