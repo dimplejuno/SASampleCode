@@ -1,4 +1,7 @@
 void setup() {
+  for(int pin=6; pin<=13; pin++) {
+    pinMode(pin, OUTPUT);
+  }
   for(int pin=13; pin>=6; pin--) {
     pinMode(pin, OUTPUT);
   }

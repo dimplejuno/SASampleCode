@@ -1,0 +1,34 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class sketch_26translate extends PApplet {
+
+public void setup() {
+  
+}
+
+public void draw() {
+  translate(mouseX, mouseY);
+  rect(0, 0, width/16, width/16);
+}
+  public void settings() {  size(800, 800); }
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "sketch_26translate" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
+}
