@@ -16,18 +16,21 @@ public class sketch_19for3 extends PApplet {
   public void setup() {
 
 
-for(int i=0;i<=400;i=i+40){
-  line(i, 0, i, 400);
-  line(0, i, 400, i);
-  line(i, 0, 400, 400-i);
-  line(0, i, 400-i, 400);
-  line(i, 400, 400, 0+i);
-  line(0, 400-i, 400-i, 0);
+for(int i=0;i<=width;i=i+width/8){
+  line(i, 0, i, height);
+  line(0, i, width, i);
+
+  line(0, i, i, 0);
+  line(i, height, width, i);
+
+  //line(0, height-i, i, height);
+  //line(i, 0, width, height-i);
+
 }
     noLoop();
   }
 
-  public void settings() { size(400, 400); }
+  public void settings() { size(800, 800); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "sketch_19for3" };
     if (passedArgs != null) {

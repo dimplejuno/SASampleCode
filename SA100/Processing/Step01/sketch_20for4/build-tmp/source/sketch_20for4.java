@@ -17,15 +17,15 @@ public class sketch_20for4 extends PApplet {
 
 
 
-for(int i=0;i<=400;i=i+40){
-  for(int j=0;j<=400;j=j+40){
-  	rect(j, i, 40, 40);
+for(int i=0;i<=width;i=i+width/8){
+  for(int j=0;j<=width;j=j+width/8){
+  	rect(j, i, width/8, width/8);
   }
 }
     noLoop();
   }
 
-  public void settings() { size(400, 400); }
+  public void settings() { size(800, 800); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "sketch_20for4" };
     if (passedArgs != null) {

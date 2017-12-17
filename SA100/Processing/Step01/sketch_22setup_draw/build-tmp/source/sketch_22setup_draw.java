@@ -14,6 +14,9 @@ import java.io.IOException;
 
 public class sketch_22setup_draw extends PApplet {
 
+// 함수(function)
+// void는  리턴값의 타입 
+// 함수 이름 
 public void setup() {
   println("I'm starting");
 }

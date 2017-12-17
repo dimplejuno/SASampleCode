@@ -12,35 +12,30 @@ import java.io.InputStream;
 import java.io.OutputStream; 
 import java.io.IOException; 
 
-public class sketch_23setup_draw_ellipse extends PApplet {
+public class sketch_22setup_draw2 extends PApplet {
 
-int x = 0;
-int speed = 10;
+int radius = 80;
+float x = -radius;
+float speed = 5.0f; 
+
 public void setup() {
   
+  ellipseMode(RADIUS);
 }
 
 public void draw() {
-  background(255);
-  strokeWeight(10);
-  stroke(255, 0, 0);
-  if(x > 380 && x < 420) {
-  	line(400,0,400,height);
-  }
-
-  strokeWeight(2);
-  stroke(0, 0, 0);
+  background(255, 0, 127);
+  //x += speed; // Increase the value of x
   x = x + speed;
-  if(x > width || x < 0) {
-  	speed = -speed;
+  if (x > width+radius) { // If the shape is off screen,
+    //x = -radius; // move to the left edge
+    speed = -speed;
   }
-
-
-  ellipse(x, 400, 100, 100);
+  arc(x, height/2, radius, radius, 0.52f, 5.76f);
 }
   public void settings() {  size(800, 800); }
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "sketch_23setup_draw_ellipse" };
+    String[] appletArgs = new String[] { "sketch_22setup_draw2" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {
